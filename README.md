@@ -49,6 +49,7 @@ This system suggests movies similar to a given movie by analyzing features like 
 movie-recommendation-system/
 │
 ├── app.py
+
 ├── movies.pkl
 ├── similarity.pkl (downloaded via Google Drive)
 ├── requirements.txt
