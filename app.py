@@ -2,6 +2,17 @@ import streamlit as st
 import pickle
 import difflib
 import requests
+import os
+
+if not os.path.exists("similarity.pkl"):
+    url = "https://drive.google.com/uc?export=download&id=1I61F_sbwK7_EyA7QS3-qz_BBsfkt74OJ"
+    response = requests.get(url)
+    
+    if response.status_code == 200:
+        with open("similarity.pkl", "wb") as f:
+            f.write(response.content)
+    else:
+        st.error("Failed to download similarity file")
 
 # Page config
 st.set_page_config(
